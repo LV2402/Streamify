@@ -62,7 +62,7 @@ export async function signup(req,res){
         res.status(201).json({success:true,user:newUser});
 
     }catch(err){
-        console.error("Error in signup controller",err);
+        console.log("Error in signup controller",err);
         res.status(500).json({message:"Internal Server Error"});
     }
 }
@@ -96,7 +96,7 @@ export async function login(req,res){
 
 
     }catch(err){
-        console.error("Error in login controller",err.message);
+        console.log("Error in login controller",err.message);
         res.status(500).json({message:"Internal Server Error"});
     }
 }
@@ -147,7 +147,7 @@ export async function onboard(req,res){
 
         res.status(200).json({success:true,user:updatedUser});
     }catch(err){
-        console.error("Onboarding error:",err);
+        console.log("Onboarding error:",err);
         res.status(500).json({message:"Internal Server Error"});
     }
 }
